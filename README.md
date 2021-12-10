@@ -1,15 +1,14 @@
-# Project Title 
-Weather classification 
+# Project Title: Weather classification 
 
 ## About the project 
-Classification context, capture plant or just open space/ street view/ skyview image ?
+This project aims to build a neural network to classify weather of 8 different classes. Transfer learning is used in this study. 
 
-## THink about 
-certian plan close up shots (Micro) are meant to extract important features, meaning to generalize to real image, it has to be able to pick up the 
-features of real image, so we kinda want to emphasize on the important features right? (so we want the opposite of regularization, optimization?)
-
-Dropping few classes to redudce training time, and I thoguht they are zoomed-in shots on plant, as compare to other zoom-out shots, i want the dataset to be more consistent. 
-Classes dropped `[dew, frost, glaze]`
+## Dataset 
+https://www.kaggle.com/jehanbhathena/weather-dataset
+There are total of 6862 images in this dataset. 
+The dataset contain of 11 different calsses of weather:  dew, fog/smog, frost, glaze, hail, lightning , rain, rainbow, rime, sandstorm and snow. <br>
+3 classes were dropped (`[dew, frost, glaze]`) as they are zoom-in shots of plants, the other are general weather shots (sky, city, open space view). I thought this way, the dataset can be more consistent. <br>
+8 Classes included in this project: `[fog/smog, hail, lightning , rain, rainbow, rime, sandstorm, snow]`
 
 ## To reproduce 
 1. First Build the docker image 
@@ -18,16 +17,9 @@ Classes dropped `[dew, frost, glaze]`
 4. You should be able to see the prediction. 
 
 
-
-### Dataset 
-https://www.kaggle.com/jehanbhathena/weather-dataset
-There are total of 6862 images in this dataset. 
-The dataset contain of 11 different calsses of weather:  dew, fog/smog, frost, glaze, hail, lightning , rain, rainbow, rime, sandstorm and snow.
-
-Classes included `[fog/smog, hail, lightning , rain, rainbow, rime, sandstorm, snow]`
-
 ## Model selection and explanation 
-EfficientNet 
+EfficientNet seems to give the best validation accuracy, we can see that Efficientnet perform well as compared to some of the other networks. Among all the Efficien Nets, EfficientNetB4 is choosen as it provides a good trade off of accuracy and speed. 
+![Network](Asset/model-comparison2.png)
 https://arxiv.org/pdf/1905.11946.pdf 
 https://github.com/tensorflow/tpu/tree/master/models/official/efficientnet?utm_source=catalyzex.com
 
