@@ -30,3 +30,24 @@ Classes included `[fog/smog, hail, lightning , rain, rainbow, rime, sandstorm, s
 EfficientNet 
 https://arxiv.org/pdf/1905.11946.pdf 
 https://github.com/tensorflow/tpu/tree/master/models/official/efficientnet?utm_source=catalyzex.com
+
+
+# Testing/ Running the project 
+ 
+## To test the model locally (without Docker): 
+```
+Open console, Ipython 
+import lambda_func
+url ='https://raw.githubusercontent.com/cjj1120/Weather_Image_Classification-Capstone_Project/main/Data/Add/Custom-test-img/rainbow-test.jpg'
+lambda_func.predict_url(url)
+```
+
+
+## Test with Docker locally:
+
+1. Build docker image `docker build -t weather-model .  
+2. Run the image `docker run -it --rm -p 8080:8080 weather-model:latest`
+3. Test with following command `python test.py` 
+
+## Test the lambda function with AWS API: 
+In console, run `python test-AWS-API.py`
