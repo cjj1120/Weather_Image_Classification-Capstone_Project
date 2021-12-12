@@ -23,7 +23,7 @@ https://github.com/tensorflow/tpu/tree/master/models/official/efficientnet?utm_s
 2. The dependency file `requirements.txt` is a conda environment that I use for multiple projects that use tf-gpu and it contains many diffferent libraries. So beware when u install the dependencies, it's advisable to just use your tf environment.  
 3. To trian the neural network, run the last section `D. Final model Checkpointing` or the python script `train.py`. Then you can convert the model to .tflite with `Tflite-model-conversion.ipynb`.        	 
 4. For building docker image and testing it, refer to [section below](##To-test-the-model-locally-(without-Docker):). Test images are stored under this [repo](https://github.com/cjj1120/Weather_Image_Classification-Capstone_Project/tree/main/Data/Add/Custom-test-img) as well. 
-5. Likewise, you can also test the deployed AWS Lambda function with the API access link in `test-AWS-API.py`, alternatively you can follow [section below](##Test-the-lambda-function-with-AWS-API:) to test the API. 
+5. Likewise, you can also test the deployed AWS Lambda function with the API access link in `test-AWS-API.py`, alternatively you can follow [section below](##Test-the-lambda-function-with-AWS-API:) to test the API. Below image shows testing of the API within AwS: ![API](Asset/Test-AWS-API.PNG) 
 
 ## To test the model locally (without Docker): 
 ```
