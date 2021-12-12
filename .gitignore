@@ -8,3 +8,4 @@
 *.png
 
 !/Data/Add/Custom-test-img/*.jpg
+!/Asset/*.png
